@@ -8,6 +8,7 @@ import {
   UserGroupIcon,
 } from '~/components/Icons';
 import config from '~/config';
+import SuggestedAccounts from '../SuggestedAccounts';
 import Menu, { MenuItem } from './Menu';
 import styles from './Sidebar.module.scss';
 
@@ -26,6 +27,9 @@ function Sidebar() {
         />
         <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<LiveActiveIcon />} />
       </Menu>
+
+      <SuggestedAccounts label="Suggested Accounts" />
+      <SuggestedAccounts label="Following Accounts" />
     </aside>
   );
 }
